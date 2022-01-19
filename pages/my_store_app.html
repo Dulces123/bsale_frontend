@@ -2,14 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="../images/app-logo.png">
+    <link rel="icon" href="../images/app-logo.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../stylesheets/my_store_app.css">
+    <link rel="stylesheet" href="../stylesheets/my_store_app.css" />
     <title>My Online Store!</title>
   </head>
   <body>
-    <div class="root"></div>
+    <div class="app-container">
+      <header class="app-header flex-al-jb p4-p4">
+        <h1>My Online Store!</h1>
+        <div>
+          <img src="../images/search.svg" alt="search" />
+          <img src="../images/cart.svg" alt="cart" />
+        </div>
+      </header>
+      <nav class = "app-navbar"></nav>
+      <section class = "app-content"></section>
+      <footer class="app-footer flex-al-jb p4-p4">
+        <p>Created by Dulces Incorporated</p>
+        <p>2022</p>
+      </footer>
+    </div>
   </body>
   <script type="module" src="../scripts/my_store_app.js" defer></script>
 </html>
