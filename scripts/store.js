@@ -9,11 +9,11 @@ const STORE = (() => {
     return products;
   }
 
-  function addProductToCart(product){
-    productsAtCart = [...productsAtCart, product];
+  function addProductToCart(_product) {
+    productsAtCart = [...productsAtCart, _product];
   }
 
-  function getProductsAtCart(){
+  function getProductsAtCart() {
     return productsAtCart;
   }
 
@@ -21,7 +21,7 @@ const STORE = (() => {
     setProducts,
     getProducts,
     addProductToCart,
-    getProductsAtCart
+    getProductsAtCart,
   };
 })();
 

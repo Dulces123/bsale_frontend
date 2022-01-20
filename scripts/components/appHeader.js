@@ -9,7 +9,7 @@ const appHeader = (() => {
       }
     });
   };
-  
+
   const displayMenu = () => {
     document.querySelector("#menu").addEventListener("click", () => {
       const navBar = document.querySelector("nav");
@@ -21,7 +21,12 @@ const appHeader = (() => {
     });
   };
 
-  const goToShoppingCart = () => {}
+  const goToShoppingCart = () => {
+    document.querySelector("#cart").addEventListener("click", () => {
+      const shoppingCart = document.querySelector(".shopping-cart");
+      shoppingCart.showModal();
+    });
+  };
 
   return {
     render: () => {
@@ -38,7 +43,7 @@ const appHeader = (() => {
       displayMenu();
       displaySearchBar();
       goToShoppingCart();
-    }
+    },
   };
 })();
 

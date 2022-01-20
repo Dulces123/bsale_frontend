@@ -27,6 +27,14 @@ const mainPage = (results) => {
       </section>
       <nav class="app-navbar"></nav>
       <p class = "results-count" >${results.length} productos disponibles!</p>
+      <dialog class ="shopping-cart">
+        <div class = "cart-header m4-m4 flex-al-jb">
+          <h1>Shopping Cart!</h1>
+          <img id = "close" class = "little-img" src = "../images/close.png">
+        </div>
+        <ul class = "cart-list column m4-m4">
+        </ul>
+      </dialog>
       <section class="app-content">
       </section>
       <footer class="app-footer flex-al-jb p4-p4">
@@ -39,6 +47,10 @@ const mainPage = (results) => {
       document
         .querySelector("#search-field")
         .addEventListener("keyup", searchProduct);
+      document.querySelector("#close").addEventListener("click", () => {
+        const shoppingCart = document.querySelector(".shopping-cart");
+        shoppingCart.close();
+      });
     },
   };
 };
