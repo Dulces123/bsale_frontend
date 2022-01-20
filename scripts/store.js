@@ -13,6 +13,10 @@ const STORE = (() => {
     productsAtCart = [...productsAtCart, _product];
   }
 
+  function setProductsAtCart(products){
+    productsAtCart = products;
+  }
+
   function getProductsAtCart() {
     return productsAtCart;
   }
@@ -22,6 +26,7 @@ const STORE = (() => {
     getProducts,
     addProductToCart,
     getProductsAtCart,
+    setProductsAtCart
   };
 })();
 
