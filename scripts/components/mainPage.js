@@ -4,6 +4,12 @@ import resultsComponent from "./resultsComponent.js";
 import STORE from "../store.js";
 
 const mainPage = (results) => {
+  function resultMessage(number){
+    if(number === 0) return 'No se encontraron productos!';
+    else if (number == 1) return '1 producto encontrado!';
+    else if (number >= 1) return `${number} productos encontrados!`
+  }
+
   return {
     render: () => {
       return `
@@ -23,11 +29,13 @@ const mainPage = (results) => {
     listeners: () => {
       appHeader.listeners();
       document.querySelector("#search-field").addEventListener("keyup", (e) => {
-        const word = e.target.value.toUpperCase();
+        const word = e.target.value.toUpperCase().trim();
+        if(!word) DomHandler.render(resultsComponent(STORE.getProducts()), ".app-content");
         const filteredResults = STORE.getProducts().filter((product) =>
           product.name.toUpperCase().includes(word)
         );
         DomHandler.render(resultsComponent(filteredResults), ".app-content");
+        document.querySelector(".results-count").innerText = resultMessage(filteredResults.length);
       });
     },
   };
