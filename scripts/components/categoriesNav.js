@@ -5,6 +5,7 @@ const categoriesNav = (categories) => {
         .map((category) => `<div class = "category-container" id = ${category.id}>${category.name}</div>`)
         .join("")}</div>`;
     },
+    listeners: () => {}
   };
 };
 export default categoriesNav;

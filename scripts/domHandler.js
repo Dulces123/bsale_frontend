@@ -3,7 +3,7 @@ const DomHandler = (() => {
     render: (elementHTML, _container) => {
       const container = document.querySelector(_container);
       container.innerHTML = elementHTML.render();
-      // elementHTML.listeners();
+      elementHTML.listeners();
     },
   };
 })();
