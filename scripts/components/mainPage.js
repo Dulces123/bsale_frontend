@@ -2,14 +2,9 @@ import appHeader from "./appHeader.js";
 import DomHandler from "../domHandler.js";
 import resultsComponent from "./resultsComponent.js";
 import STORE from "../store.js";
+import helpers from "../helpers/helpers.js"
 
 const mainPage = (results) => {
-  function resultMessage(number){
-    if(number === 0) return 'No se encontraron productos!';
-    else if (number == 1) return '1 producto encontrado!';
-    else if (number >= 1) return `${number} productos encontrados!`
-  }
-
   return {
     render: () => {
       return `
@@ -35,7 +30,7 @@ const mainPage = (results) => {
           product.name.toUpperCase().includes(word)
         );
         DomHandler.render(resultsComponent(filteredResults), ".app-content");
-        document.querySelector(".results-count").innerText = resultMessage(filteredResults.length);
+        document.querySelector(".results-count").innerText = helpers.resultMessage(filteredResults.length);
       });
     },
   };
