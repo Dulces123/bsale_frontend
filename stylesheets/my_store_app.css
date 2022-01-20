@@ -11,6 +11,11 @@
   font-family: "Dongle", sans-serif;
 }
 
+.app-container{
+  width: 100%;
+  height: 600px;
+}
+
 /*body*/
 body {
   background-color: #f8f8f8;
@@ -100,6 +105,12 @@ footer p {
 .flex-al-jb {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.flex-al-jc{
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 

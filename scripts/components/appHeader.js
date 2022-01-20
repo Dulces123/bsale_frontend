@@ -14,8 +14,6 @@ const appHeader = (() => {
   };
   
   const displayMenu = () => {
-    // const categories = await categoriesFetcher.index();
-    DomHandler.render(categoriesNav([{name: "Dulces", id: 1}]), "nav");
     document.querySelector("#menu").addEventListener("click", () => {
       const navBar = document.querySelector("nav");
       if (window.getComputedStyle(navBar).display === "block")
