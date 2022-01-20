@@ -1,15 +1,17 @@
 const STORE = (() => {
-  let results = [];
-  function setResults(products) {
-    results = [...products];
+  let products = [];
+  function setProducts(_products) {
+    products = _products;
   }
 
-  function getResults() {
-    return [...results];
+  function getProducts() {
+    return products;
   }
 
   return {
-    setResults,
-    getResults,
+    setProducts,
+    getProducts,
   };
 })();
+
+export default STORE;

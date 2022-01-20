@@ -1,6 +1,7 @@
 import appHeader from "./appHeader.js";
 import DomHandler from "../domHandler.js";
 import resultsComponent from "./resultsComponent.js";
+import STORE from "../store.js";
 
 const mainPage = (results) => {
   return {
@@ -21,8 +22,12 @@ const mainPage = (results) => {
     },
     listeners: () => {
       appHeader.listeners();
-      document.querySelector("#search-field").addEventListener("keyup", () => {
-        DomHandler.render(resultsComponent([]),".app-content")
+      document.querySelector("#search-field").addEventListener("keyup", (e) => {
+        const word = e.target.value.toUpperCase();
+        const filteredResults = STORE.getProducts().filter((product) =>
+          product.name.toUpperCase().includes(word)
+        );
+        DomHandler.render(resultsComponent(filteredResults), ".app-content");
       });
     },
   };
