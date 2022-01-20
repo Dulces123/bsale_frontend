@@ -1,3 +1,6 @@
+import DomHandler from "../domHandler.js";
+import categoriesNav from "./categoriesNav.js"
+
 const appHeader = (() => {
   const displaySearchBar = () => {
     document.querySelector("#search").addEventListener("click", () => {
@@ -11,6 +14,8 @@ const appHeader = (() => {
   };
   
   const displayMenu = () => {
+    // const categories = await categoriesFetcher.index();
+    DomHandler.render(categoriesNav([{name: "Dulces", id: 1}]), "nav");
     document.querySelector("#menu").addEventListener("click", () => {
       const navBar = document.querySelector("nav");
       if (window.getComputedStyle(navBar).display === "block")
@@ -20,6 +25,8 @@ const appHeader = (() => {
       }
     });
   };
+
+  const goToShoppingCart = () => {}
 
   return {
     render: () => {
@@ -35,6 +42,7 @@ const appHeader = (() => {
     listeners: () => {
       displayMenu();
       displaySearchBar();
+      goToShoppingCart();
     }
   };
 })();
