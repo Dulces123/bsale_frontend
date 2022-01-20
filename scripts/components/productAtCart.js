@@ -10,13 +10,13 @@ const productAtCard = (product) => {
       </div>
       <div>
         <p>${product.name}</p>
-        <p>${product.price}</p>
+        <p id = "product-price">${product.price}</p>
       </div>
       <div>
-        <button><img class = "little-img" src = "../images/drop.png"></button>
-        <button><img class = "little-img"  src = "../images/less.png"></button>
-        <p>Quantity:</p><p>12</p>
-        <button><img class = "little-img"  src = "../images/more.png"></button>
+        <button><img id = "drop" class = "little-img" src = "../images/drop.png"></button>
+        <button><img id = "less" class = "little-img"  src = "../images/less.png"></button>
+        <p>Quantity:</p><p id = "product-quantity" >1</p>
+        <button><img id = "more" class = "little-img"  src = "../images/more.png"></button>
       </div>
       </li>
       `;
