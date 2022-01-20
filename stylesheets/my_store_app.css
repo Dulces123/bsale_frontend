@@ -1,5 +1,6 @@
 /*Font*/
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap");
+
 /* General */
 * {
   margin: 0;
@@ -20,6 +21,7 @@
 body {
   background-color: #f8f8f8;
 }
+
 /*header*/
 .app-header {
   background-color: #c0c0c0;
@@ -41,6 +43,7 @@ body {
   align-items: center;
   gap: 2px;
 }
+
 /*search bar*/
 .search-bar{
   background-color: #c0c0c0;
@@ -68,6 +71,34 @@ body {
   border: 2px none;
   display: flex;
   padding: 0px 8px;
+}
+
+/*app-content*/
+.app-content{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  padding: 12px 12px;
+  row-gap: 12px;
+}
+
+.product-container{
+  width: 180px;
+  height: 260px;
+  border-radius: 8px;
+  background-color: whitesmoke;
+  border-style: none;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.733);
+  place-self: center;
+}
+
+.product-img{
+  width: 100px;
+  height: 100px;
+}
+
+.results-count{
+  font-size: 26px;
+  margin: 4px 4px;
 }
 /*footer*/
 footer {
@@ -118,6 +149,10 @@ footer p {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.column{
+  flex-direction: column;
 }
 
 .p4-p4 {
