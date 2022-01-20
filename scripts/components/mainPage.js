@@ -1,5 +1,7 @@
 import appHeader from "./appHeader.js";
-const mainPage = (() => {
+import productCard from "./productComponent.js";
+
+const mainPage = (results) => {
   return {
     render: () => {
       return `
@@ -8,7 +10,9 @@ const mainPage = (() => {
         <input id = "search-field" type="search" placeholder="Product....">
       </section>
       <nav class="app-navbar" style = "display: none"></nav>
-      <section class="app-content"></section>
+      <section class="app-content">
+        ${results.map((result) => productCard(result).render()).join("")}
+      </section>
       <footer class="app-footer flex-al-jb p4-p4">
         <p>Created by Dulces Incorporated</p>
         <p>2022</p>
@@ -16,11 +20,16 @@ const mainPage = (() => {
     },
     listeners: () => {
       appHeader.listeners();
-      document.querySelector("#search-field").addEventListener('keyup', (e) => {
-        console.log(e.target.value)
-      })
+      document.querySelector("#search-field").addEventListener("keyup", (e) => {
+        console.log(e.target.value);
+      });
+      document
+        .querySelectorAll(".product-container")
+        .forEach((element) =>
+          element.addEventListener("click", () => alert("HERE!"))
+        );
     },
   };
-})();
+};
 
 export default mainPage;

@@ -9,12 +9,11 @@ const init = async () => {
   /*fetching products and categories*/
   const categories = await categoriesFetcher.index();
   const products = await productsFetcher.index();
-  console.log(products);
   /*render laodingPage in order to avoid fetch delay*/
   DomHandler.render(loadingPage, ".app-container");
   setTimeout(() => {
     /*render mainPage */
-    DomHandler.render(mainPage, ".app-container");
+    DomHandler.render(mainPage(products), ".app-container");
     DomHandler.render(categoriesNav(categories), ".app-navbar")
     window.scrollTo(0,0);
     /*remove class to render components properly*/

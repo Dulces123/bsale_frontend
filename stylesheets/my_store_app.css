@@ -20,6 +20,7 @@
 body {
   background-color: #f8f8f8;
 }
+
 /*header*/
 .app-header {
   background-color: #c0c0c0;
@@ -41,6 +42,7 @@ body {
   align-items: center;
   gap: 2px;
 }
+
 /*search bar*/
 .search-bar{
   background-color: #c0c0c0;
@@ -69,6 +71,28 @@ body {
   display: flex;
   padding: 0px 8px;
 }
+
+/*app-content*/
+.app-content{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  padding: 12px 12px;
+}
+
+.product-container{
+  width: 180px;
+  height: 180px;
+  background-color: blueviolet;
+  border: 2px solid;
+  place-self: center;
+}
+
+.product-img{
+  width: 100px;
+  height: 100px;
+}
+
+
 /*footer*/
 footer {
   background-color: #c0c0c0;
