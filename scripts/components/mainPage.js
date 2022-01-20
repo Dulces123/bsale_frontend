@@ -27,6 +27,10 @@ const mainPage = (results) => {
       </section>
       <nav class="app-navbar"></nav>
       <p class = "results-count" >${results.length} productos disponibles!</p>
+      <dialog class ="shopping-cart">
+        <h2>¡ATENCIÓN!</h2>
+        <p>Se ha producido un problema en la aplicación.</p>
+      </dialog>
       <section class="app-content">
       </section>
       <footer class="app-footer flex-al-jb p4-p4">
