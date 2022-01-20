@@ -1,6 +1,3 @@
-import DomHandler from "../domHandler.js";
-import categoriesNav from "./categoriesNav.js"
-
 const appHeader = (() => {
   const displaySearchBar = () => {
     document.querySelector("#search").addEventListener("click", () => {

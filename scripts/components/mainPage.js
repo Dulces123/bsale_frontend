@@ -1,4 +1,6 @@
 import appHeader from "./appHeader.js";
+import DomHandler from "../domHandler.js";
+import resultsComponent from "./resultsComponent.js";
 
 const mainPage = (results) => {
   return {
@@ -19,14 +21,9 @@ const mainPage = (results) => {
     },
     listeners: () => {
       appHeader.listeners();
-      document.querySelector("#search-field").addEventListener("keyup", (e) => {
-        console.log(e.target.value);
+      document.querySelector("#search-field").addEventListener("keyup", () => {
+        DomHandler.render(resultsComponent([]),".app-content")
       });
-      // document
-      //   .querySelectorAll(".product-container")
-      //   .forEach((element) =>
-      //     element.addEventListener("click", () => alert("HERE!"))
-      //   );
     },
   };
 };
