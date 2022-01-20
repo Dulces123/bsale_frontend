@@ -9,7 +9,8 @@ const mainPage = (results) => {
       <section class = "search-bar" style = "display: none">
         <input id = "search-field" type="search" placeholder="Product....">
       </section>
-      <nav class="app-navbar" style = "display: none"></nav>
+      <nav class="app-navbar"></nav>
+      <p class = "results-count" >${results.length} productos disponibles!</p>
       <section class="app-content">
         ${results.map((result) => productCard(result).render()).join("")}
       </section>

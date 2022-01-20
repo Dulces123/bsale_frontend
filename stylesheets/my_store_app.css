@@ -1,5 +1,6 @@
 /*Font*/
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap");
+
 /* General */
 * {
   margin: 0;
@@ -77,13 +78,16 @@ body {
   display: grid;
   grid-template-columns: repeat(6,1fr);
   padding: 12px 12px;
+  row-gap: 12px;
 }
 
 .product-container{
   width: 180px;
-  height: 180px;
-  background-color: blueviolet;
-  border: 2px solid;
+  height: 260px;
+  border-radius: 8px;
+  background-color: whitesmoke;
+  border-style: none;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.733);
   place-self: center;
 }
 
@@ -92,7 +96,10 @@ body {
   height: 100px;
 }
 
-
+.results-count{
+  font-size: 26px;
+  margin: 4px 4px;
+}
 /*footer*/
 footer {
   background-color: #c0c0c0;
@@ -142,6 +149,10 @@ footer p {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.column{
+  flex-direction: column;
 }
 
 .p4-p4 {
