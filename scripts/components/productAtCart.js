@@ -2,7 +2,7 @@ const productAtCard = (product) => {
   return {
     render: () => {
       return `
-      <div id = ${product.id} class = "cart-product">
+      <li id = ${product.id} class = "cart-product">
       <div>
         <img class = "product-img" src = "${
           !product.url_image ? "../images/notavailable.png" : product.url_image
@@ -18,7 +18,7 @@ const productAtCard = (product) => {
         <p>Quantity:</p><p>12</p>
         <button><img class = "little-img"  src = "../images/more.png"></button>
       </div>
-      </div>
+      </li>
       `;
     },
   };

@@ -6,6 +6,7 @@ import mainPage from "./components/mainPage.js";
 import loadingPage from "./components/loadingPage.js";
 import categoriesNav from "./components/categoriesNav.js";
 import resultsComponent from "./components/resultsComponent.js";
+import cartList from "./components/cartList.js"
 
 const init = async () => {
   /*fetching products and categories*/
@@ -19,7 +20,8 @@ const init = async () => {
     /*render mainPage */
     DomHandler.render(mainPage(products), ".app-container");
     DomHandler.render(categoriesNav(categories), ".app-navbar");
-    DomHandler.render(resultsComponent(products), ".app-content");
+    // DomHandler.render(resultsComponent(products), ".app-content");
+    DomHandler.render(cartList(products), ".app-content");
     window.scrollTo(0, 0);
     /*remove class to render components properly*/
     document.querySelector(".app-container").classList.remove("flex-al-jc");
