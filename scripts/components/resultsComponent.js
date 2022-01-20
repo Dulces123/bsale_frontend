@@ -1,4 +1,5 @@
 import productCard from "./productComponent.js";
+import productAtCard from "./productAtCart.js";
 import STORE from "../store.js";
 
 const resultsComponent = (results) => {
@@ -13,6 +14,7 @@ const resultsComponent = (results) => {
   return {
     render: () => {
       return `
+      ${productAtCard(results[0]).render()}
       ${results.map((result) => productCard(result).render()).join("")}`;
     },
     listeners: () => {
