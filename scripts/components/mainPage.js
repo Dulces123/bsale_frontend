@@ -1,5 +1,7 @@
 import appHeader from "./appHeader.js";
-import productCard from "./productComponent.js";
+import DomHandler from "../domHandler.js";
+import resultsComponent from "./resultsComponent.js";
+import STORE from "../store.js";
 
 const mainPage = (results) => {
   return {
@@ -12,7 +14,6 @@ const mainPage = (results) => {
       <nav class="app-navbar"></nav>
       <p class = "results-count" >${results.length} productos disponibles!</p>
       <section class="app-content">
-        ${results.map((result) => productCard(result).render()).join("")}
       </section>
       <footer class="app-footer flex-al-jb p4-p4">
         <p>Created by Dulces Incorporated</p>
@@ -22,13 +23,12 @@ const mainPage = (results) => {
     listeners: () => {
       appHeader.listeners();
       document.querySelector("#search-field").addEventListener("keyup", (e) => {
-        console.log(e.target.value);
-      });
-      document
-        .querySelectorAll(".product-container")
-        .forEach((element) =>
-          element.addEventListener("click", () => alert("HERE!"))
+        const word = e.target.value.toUpperCase();
+        const filteredResults = STORE.getProducts().filter((product) =>
+          product.name.toUpperCase().includes(word)
         );
+        DomHandler.render(resultsComponent(filteredResults), ".app-content");
+      });
     },
   };
 };

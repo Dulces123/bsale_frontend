@@ -9,12 +9,7 @@ const productCard = (product) => {
         }" alt = "product">
         <p>${product.price}
       </div>`;
-    },
-    listeners: () => {
-      document
-        .querySelector(".product-container")
-        .addEventListener("click", () => alert("Dulces"));
-    },
+    }
   };
 };
 
