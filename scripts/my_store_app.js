@@ -23,6 +23,8 @@ const init = async () => {
     window.scrollTo(0, 0);
     /*remove class to render components properly*/
     document.querySelector(".app-container").classList.remove("flex-al-jc");
+    /*remove listener because all option doesn not filter*/
+    document.querySelector("#all").removeEventListener("click", resultsByCategory)
   }, 6000);
 };
 
