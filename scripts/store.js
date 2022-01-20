@@ -1,15 +1,15 @@
 const STORE = (() => {
   let results = [];
-  function setResults(products){
+  function setResults(products) {
     results = [...products];
   }
 
-  function getResults(){
+  function getResults() {
     return [...results];
   }
 
   return {
     setResults,
-    getResults
-  }
-})()
+    getResults,
+  };
+})();
