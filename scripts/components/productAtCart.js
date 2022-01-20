@@ -4,7 +4,7 @@ const productAtCard = (product) => {
       return `
       <li id = ${product.id} class = "cart-product">
       <div>
-        <img class = "product-img" src = "${
+        <img class = "cart-product-img" src = "${
           !product.url_image ? "../images/notavailable.png" : product.url_image
         }" alt = "product">
       </div>

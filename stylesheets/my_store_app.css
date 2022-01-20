@@ -114,14 +114,23 @@ footer p {
 }
 
 /*shopping cart*/
+.cart-header{
+  border-bottom: 2px solid #808080;
+}
 
 .shopping-cart {
   margin: auto;
+  width: 40%;
 }
 
 dialog::backdrop {
   background-color: #888888;
   mix-blend-mode: darken;
+}
+
+.cart-list{
+  display: flex;
+  gap:12px;
 }
 
 .cart-product {
@@ -131,6 +140,10 @@ dialog::backdrop {
   border: 1px solid gray;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
   display: flex;
+}
+
+.cart-product-img{
+  width: 90px;
 }
 
 .cart-product button {
@@ -184,6 +197,10 @@ dialog::backdrop {
 
 .column {
   flex-direction: column;
+}
+
+.m4-m4{
+  margin: 4px 4px;
 }
 
 .p4-p4 {
