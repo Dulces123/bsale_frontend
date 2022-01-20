@@ -3,10 +3,11 @@ import STORE from "../store.js";
 
 const resultsComponent = (results) => {
   function toCart(e){
-    const productId = e.target.id
-    const currentProduct = STORE.getProducts().filter(product => product.id === parseInt(productId))
-    STORE.addProductToCart(currentProduct)
-    console.log(STORE.getProductsAtCart());
+    console.log(STORE.getProductsAtCart())
+    const productId = parseInt(e.target.id);
+    const currentProduct = STORE.getProducts().filter(product => product.id === productId)[0]
+    if (STORE.getProductsAtCart().map(p => p.id).includes(productId)) return;
+    STORE.addProductToCart(currentProduct);
   }
 
   return {
