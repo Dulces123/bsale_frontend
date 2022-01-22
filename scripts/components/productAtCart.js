@@ -11,7 +11,7 @@ const productAtCard = (product) => {
         }" alt = "product">
       </div>
       <div class = "flex-jc column">
-        <p>${product.name}</p>
+        <p id = "product-name">${product.name}</p>
         <p id = "product-price">$${helpers.priceWithDiscount(product.price, product.discount)}.00</p>
       </div>
       <div class = "flex-al-jb options g12">
