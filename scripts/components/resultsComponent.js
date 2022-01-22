@@ -22,7 +22,7 @@ const resultsComponent = (results) => {
     const cardContainer = e.target.closest(".product-container");
     animateCard(cardContainer);
     STORE.addProductToCart(currentProduct);
-    DomHandler.render(cartList(STORE.getProductsAtCart()),".cart-list");
+    DomHandler.render(cartList(STORE.getProductsAtCart()),".shopping-cart-content");
     helpers.totalAmount("#product-price");
   }
 

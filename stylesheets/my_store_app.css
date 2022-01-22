@@ -130,6 +130,42 @@ body {
   transition: background 0.6s, color 0.6s;
 }
 
+.cart-invoice-button{
+  background: #0FFF50;
+  border-radius: 8px;
+  width: -webkit-fill-available;
+  height: 26px;
+}
+
+.cart-invoice-button:hover{
+  background: green;
+  color: white;
+  transition: background 0.6s, color 0.6s;
+}
+
+.cd-image{
+  width:48px;
+  width:32px;
+  border: 2px solid whitesmoke;
+}
+
+.pay-button{
+  background: #0FFF50;
+  border-radius: 8px;
+  width: -webkit-fill-available;
+  height: 50px;
+  font-size:26px;
+}
+
+.correct-button{
+  background: red;
+  color:white;
+  border-radius: 8px;
+  width: -webkit-fill-available;
+  height: 26px;
+  font-size:26px;
+}
+
 /*footer*/
 footer {
   background-color: #c0c0c0;
@@ -202,15 +238,28 @@ dialog::backdrop {
   top:38px;
 }
 
+.big-button{
+  border-radius: 8px;
+  width: 40%;
+  font-size: 20px;
+}
+
 .cart-product-img{
   width: 90px;
   border: 1px solid grey;
   border-radius: 8px;
+  height: 90px;
 }
 
 .product-img{
   border: 1px solid grey;
   border-radius: 8px;
+}
+
+.cd-input{
+  outline: none;
+  border: 2px solid whitesmoke;
+  padding: 2px 2px;
 }
 
 .cart-product button {
@@ -255,6 +304,11 @@ dialog::backdrop {
 }
 
 /*Utils*/
+.flex{
+  display: flex;
+  justify-content:center;
+}
+
 .flex-al-jb {
   display: flex;
   justify-content: space-between;
@@ -278,8 +332,18 @@ dialog::backdrop {
   align-items: center;
 }
 
+.flex-al-jsb{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .column {
   flex-direction: column;
+}
+
+.border{
+  border: 2px solid black
 }
 
 .m4-m4{
@@ -300,4 +364,21 @@ dialog::backdrop {
 
 .g12{
   gap:12px;
+}
+
+.table-text{
+  text-align: center;
+  font-size: 26px;
+}
+
+.bg-green{
+  background: #0FFF50;
+}
+
+.bg-red{
+  background: red;
+}
+
+.white-text{
+  color: white;
 }

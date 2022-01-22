@@ -10,7 +10,7 @@ const helpers = (() => {
   }
   
   function formatPrice(price){
-    return `$${price}.00`
+    return `$${price.toFixed(2)}`
   }
 
   function totalAmount(element){
