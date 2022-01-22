@@ -1,5 +1,6 @@
 import productAtCard from "./productAtCart.js";
 import DomHandler from "../domHandler.js";
+import helpers from "../helpers/helpers.js";
 import STORE from "../store.js";
 
 const cartList = (products) => {
@@ -13,13 +14,19 @@ const cartList = (products) => {
     );
     let productQuantity = cart.querySelector("#product-quantity").innerText;
     const basePrice = product.price * (1 - product.discount / 100);
-
+  
     if (dropButton) {
       const filteredProducts = STORE.getProductsAtCart().filter(
         (product) => product.id !== parseInt(cart.id)
       );
       STORE.setProductsAtCart(filteredProducts);
       DomHandler.render(cartList(STORE.getProductsAtCart()), ".cart-list");
+      if(STORE.getProductsAtCart().length === 0) {
+        const nothingToShow = document.createElement("img");
+        nothingToShow.src = "../images/noproducts.png";
+        nothingToShow.classList.add("nothing");
+        document.querySelector("ul").append(nothingToShow);
+      }
     }
 
     if (moreButton) {
@@ -33,12 +40,15 @@ const cartList = (products) => {
         parseInt(productQuantity) - 1;
     }
     cart.querySelector("#product-price").innerText =
-      basePrice * parseInt(cart.querySelector("#product-quantity").innerText);
+      helpers.formatPrice(basePrice * parseInt(cart.querySelector("#product-quantity").innerText));
+      helpers.totalAmount("#product-price");
   }
 
   return {
     render: () => {
       return `
+        <h1>${helpers.quantityMessage(products.length)}</h1>
+        <h1 id = "total">Total: $0</h1>
         ${products.map((product) => productAtCard(product).render()).join("")}
       `;
     },
