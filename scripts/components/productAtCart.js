@@ -14,7 +14,7 @@ const productAtCard = (product) => {
         <p id = "product-name">${product.name}</p>
         <p id = "product-price">${helpers.formatPrice(helpers.priceWithDiscount(product.price, product.discount))}</p>
       </div>
-      <div class = "flex-al-jb options g12">
+      <div class = "cart-options flex-al-jb options g12">
         <div class = "flex-al-jc g4">
           <img id = "less" class = "little-img"  src = "../images/less.png">
           <p id = "product-quantity" >1</p>
