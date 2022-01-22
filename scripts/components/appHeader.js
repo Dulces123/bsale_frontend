@@ -1,3 +1,4 @@
+import STORE from "../store.js";
 const appHeader = (() => {
   const displaySearchBar = () => {
     document.querySelector("#search").addEventListener("click", () => {
