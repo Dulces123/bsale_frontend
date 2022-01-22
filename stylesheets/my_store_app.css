@@ -1,25 +1,15 @@
 /*Font*/
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap");
-/* @import "../stylesheets/media_queries.css"; */
-/* General */
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  border-style: none;
-  box-sizing: border-box;
-  list-style: none;
-  font-family: "Dongle", sans-serif;
+@import "../stylesheets/utils.css";
+@import "../stylesheets/reset.css";
+
+.loading{
+  width: 100%;
 }
 
 .app-container {
   width: 100%;
   height: 600px;
-}
-
-/* body*/
-body {
-  background-color: #f8f8f8;
 }
 
 /*header*/
@@ -282,178 +272,4 @@ dialog::backdrop {
   width: 20px;
   height: 20px;
   background: transparent;
-}
-
-@media (max-width: 278px) {
-  .app-header h1 {
-    font-size: 150%;
-  }
-
-  .app-header img {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-@media (max-width: 304px) {
-  .app-footer p {
-    font-size: 100%;
-  }
-  .categories-container {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 380px){
-  .app-content{
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .cart-options{
-    position: absolute;
-  }
-}
-
-@media (max-width: 1096px){
-  .app-content{
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-@media (max-width: 912px){
-  .app-content{
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 760px){
-  .app-content{
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .product-container{
-    width: 140px;
-  }
-}
-
-@media (max-width: 520px){
-  .app-content{
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .product-container{
-    width: 150px;
-  }
-}
-
-@media (max-width:360px){
-  .cart-product{
-    display: flex;
-    flex-direction: row;
-  }
-  .cart-options{
-    right: 21px;
-  }
-}
-
-@media (max-width:280px){
-  .cart-product{
-    height:120px;
-  }
-
-  .cart-options{
-    right: 66px;
-    top:48px;
-  }
-}
-
-@media (max-width: 420px){
-  .app-content{
-    display:flex;
-    flex-direction:column;
-  }
-
-  .product-container{
-    width: 60%;
-  }
-
-  .cart-options{
-    position: relative;
-  }
-}
-/*Utils*/
-.flex{
-  display: flex;
-  justify-content:center;
-}
-
-.flex-al-jb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.flex-jc{
-  display: flex;
-  justify-content: center;
-}
-
-.flex-al-jc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-al-ja {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.flex-al-jsb{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.column {
-  flex-direction: column;
-}
-
-.border{
-  border: 2px solid black
-}
-
-.m4-m4{
-  margin: 4px 4px;
-}
-
-.p4-p4 {
-  padding: 4px 4px;
-}
-
-.g4{
-  gap: 4px;
-}
-
-.g2{
-  gap: 2px;
-}
-
-.g12{
-  gap:12px;
-}
-
-.table-text{
-  text-align: center;
-  font-size: 26px;
-}
-
-.bg-green{
-  background: #0FFF50;
-}
-
-.bg-red{
-  background: red;
-}
-
-.white-text{
-  color: white;
 }
