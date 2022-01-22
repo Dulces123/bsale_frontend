@@ -215,6 +215,12 @@ dialog::backdrop {
   top:38px;
 }
 
+.big-button{
+  border-radius: 8px;
+  width: 40%;
+  font-size: 20px;
+}
+
 .cart-product-img{
   width: 90px;
   border: 1px solid grey;
@@ -314,4 +320,21 @@ dialog::backdrop {
 
 .g12{
   gap:12px;
+}
+
+.table-text{
+  text-align: center;
+  font-size: 26px;
+}
+
+.bg-green{
+  background: #0FFF50;
+}
+
+.bg-red{
+  background: red;
+}
+
+.white-text{
+  color: white;
 }
