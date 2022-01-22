@@ -33,7 +33,7 @@ const cartList = (products) => {
       STORE.setProductsAtCart(filteredProducts);
       DomHandler.render(cartList(STORE.getProductsAtCart()), ".shopping-cart-content");
       if(STORE.getProductsAtCart().length === 0) {
-        DomHandler.render(nothingComponent,".shopping-cart-content")
+        DomHandler.render(nothingComponent,".shopping-cart-content");
       }
     }
 

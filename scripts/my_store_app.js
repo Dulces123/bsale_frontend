@@ -6,7 +6,6 @@ import mainPage from "./components/mainPage.js";
 import loadingPage from "./components/loadingPage.js";
 import categoriesNav from "./components/categoriesNav.js";
 import resultsComponent from "./components/resultsComponent.js";
-import invoiceComponent from "./components/invoiceComponent.js";
 
 const init = async () => {
   /*fetching products and categories*/

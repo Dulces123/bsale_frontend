@@ -21,12 +21,17 @@ const STORE = (() => {
     return productsAtCart;
   }
 
+  function cleanCart(){
+    productsAtCart = [];
+  }
+
   return {
     setProducts,
     getProducts,
     addProductToCart,
     getProductsAtCart,
-    setProductsAtCart
+    setProductsAtCart,
+    cleanCart
   };
 })();
 

@@ -1,4 +1,6 @@
 import DomHandler from "../domHandler.js"
+import nothingComponent from "./nothingComponent.js"
+import payPlatform from "./payPlatform.js"
 import STORE from "../store.js";
 import cartList from "./cartList.js"
 import helpers from "../helpers/helpers.js";
@@ -8,6 +10,10 @@ const invoiceComponent = (details) => {
     document.querySelector('dialog').style.width = '40%';
     DomHandler.render(cartList(STORE.getProductsAtCart()),".shopping-cart-content");
     helpers.totalAmount("#product-price");
+  }
+
+  function payProducts(){
+    DomHandler.render(payPlatform,".shopping-cart-content");
   }
 
   return {
@@ -29,6 +35,7 @@ const invoiceComponent = (details) => {
     },
     listeners: () => {
       document.querySelector('#back').addEventListener('click', backToCart);
+      document.querySelector('#pay').addEventListener('click',payProducts);
     },
   };
 };
