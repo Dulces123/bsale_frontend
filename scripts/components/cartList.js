@@ -7,6 +7,7 @@ import STORE from "../store.js";
 
 const cartList = (products) => {
   function showInvoice(){
+    document.querySelector(".cart-invoice-button").disabled = true;
     document.querySelector("dialog").style.width = "80%";
     const details = [...document.querySelectorAll("li")].map(e => [e.querySelector("#product-quantity").innerText, 
     e.querySelector("#product-name").innerText,
