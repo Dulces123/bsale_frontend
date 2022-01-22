@@ -32,11 +32,13 @@ const mainPage = (results) => {
           <h1>Shopping Cart!</h1>
           <img id = "close" class = "little-img" src = "../images/close.png">
         </div>
-        <ul class = "cart-list column m4-m4 p4-p4">
+        <div class = "shopping-cart-content m4-m4">
           <h1>0 items seleccionados 😢</h1>
           <h1 id="total">Total: $0.00</h1>
-          <img class = "nothing" src ="../images/noproducts.png" alt = "nothing">
-        </ul>
+          <ul class = "cart-list column m4-m4 p4-p4">
+            <img class = "nothing" src ="../images/noproducts.png" alt = "nothing">
+          </ul>
+        </div>
       </dialog>
       <section class="app-content">
       </section>

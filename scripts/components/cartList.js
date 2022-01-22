@@ -1,4 +1,5 @@
 import productAtCard from "./productAtCart.js";
+import nothingComponent from "./nothingComponent.js";
 import DomHandler from "../domHandler.js";
 import helpers from "../helpers/helpers.js";
 import STORE from "../store.js";
@@ -20,12 +21,9 @@ const cartList = (products) => {
         (product) => product.id !== parseInt(cart.id)
       );
       STORE.setProductsAtCart(filteredProducts);
-      DomHandler.render(cartList(STORE.getProductsAtCart()), ".cart-list");
+      DomHandler.render(cartList(STORE.getProductsAtCart()), ".shopping-cart-content");
       if(STORE.getProductsAtCart().length === 0) {
-        const nothingToShow = document.createElement("img");
-        nothingToShow.src = "../images/noproducts.png";
-        nothingToShow.classList.add("nothing");
-        document.querySelector("ul").append(nothingToShow);
+        DomHandler.render(nothingComponent,".shopping-cart-content")
       }
     }
 
@@ -49,7 +47,10 @@ const cartList = (products) => {
       return `
         <h1>${helpers.quantityMessage(products.length)}</h1>
         <h1 id = "total">Total: $0</h1>
-        ${products.map((product) => productAtCard(product).render()).join("")}
+        <button class = "flex-al-jc cart-invoice-button">Generar Invoice</button>
+        <ul  class = "cart-list column m4-m4 p4-p4">
+          ${products.map((product) => productAtCard(product).render()).join("")}
+        </ul>
       `;
     },
     listeners: () => {
