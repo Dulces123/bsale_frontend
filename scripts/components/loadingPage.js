@@ -1,7 +1,7 @@
 const loadingPage = (() => {
   return {
     render: () => {
-      return `<img src = "../images/loading.gif" alt = "loading!">`
+      return `<img class = "loading" src = "../images/loading.gif" alt = "loading!">`
     },
     listeners: () => {}
   }

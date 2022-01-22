@@ -7,7 +7,7 @@ const payPlatform = (() => {
   return {
     render: () => {
       return `
-      <div class="flex-al-jsb">
+      <div class="cd-data flex-al-jsb">
       <p>Direccion de Facturacion</p>
           <select class = "border" data-purpose="billing-address-country" autocomplete="off" id="billingAddressCountry" class="form-control">
             <option value="" disabled="">Selecciona...</option>
