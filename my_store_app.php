@@ -1,0 +1,1 @@
+<?php include_once("./template/my_store_app.html"); ?>
